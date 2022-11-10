@@ -2,13 +2,13 @@ package config;
 
 import org.aeonbits.owner.Config;
 
-@Config.Sources("classpath:realCredentials.properties")
+@Config.Sources("classpath:real.properties")
 public interface RealCredentialsConfig extends Config {
 
     @Key("deviceName")
-    String deviceName();
+    String getDeviceName();
 
     @Key("platformVersion")
-    String platformVersion();
+    String getPlatformVersion();
 
 }

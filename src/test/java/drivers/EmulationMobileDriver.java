@@ -32,8 +32,8 @@ public class EmulationMobileDriver implements WebDriverProvider {
     public WebDriver createDriver(Capabilities capabilities) {
 
         EmulationCredentialsConfig config = ConfigFactory.create(EmulationCredentialsConfig.class, System.getProperties());
-        String deviceName = config.deviceName();
-        String platformVersion = config.platformVersion();
+        String deviceName = config.getDeviceName();
+        String platformVersion = config.getPlatformVersion();
 
 
         File app = getApp();

@@ -32,8 +32,8 @@ public class RealMobileDriver implements WebDriverProvider {
     public WebDriver createDriver(Capabilities capabilities) {
 
         RealCredentialsConfig config = ConfigFactory.create(RealCredentialsConfig.class, System.getProperties());
-        String deviceName = config.deviceName();
-        String platformVersion = config.platformVersion();
+        String deviceName = config.getDeviceName();
+        String platformVersion = config.getPlatformVersion();
 
 
         File app = getApp();

@@ -2,31 +2,31 @@ package config;
 
 import org.aeonbits.owner.Config;
 
-@Config.Sources("classpath:browserstackCredentials.properties")
+@Config.Sources("classpath:browserstack.properties")
 public interface BrowserstackCredentialsConfig extends Config {
 
     @Key("login")
-    String login();
+    String getLogin();
 
     @Key("password")
-    String password();
+    String getPassword();
 
     @Key("app")
-    String app();
+    String getApp();
 
     @Key("device")
-    String device();
+    String getDevice();
 
     @Key("osVersion")
-    String osVersion();
+    String getOsVersion();
 
     @Key("project")
-    String project();
+    String getProject();
 
     @Key("build")
-    String build();
+    String getBuild();
 
     @Key("name")
-    String name();
+    String getName();
 
 }

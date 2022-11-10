@@ -21,7 +21,6 @@ import static io.qameta.allure.Allure.step;
 
 
 public class TestBase {
-
     public static String device = System.getProperty("deviceHost");
     OnboardingPage onboardingPage = new OnboardingPage();
     SearchBar searchBar = new SearchBar();
@@ -29,7 +28,6 @@ public class TestBase {
 
     @BeforeAll
     public static void setup() {
-
         switch (device) {
             case ("browserstack"):
                 Configuration.browser = BrowserstackMobileDriver.class.getName();

@@ -2,13 +2,13 @@ package config;
 
 import org.aeonbits.owner.Config;
 
-@Config.Sources("classpath:emulationCredentials.properties")
+@Config.Sources("classpath:emulation.properties")
 public interface EmulationCredentialsConfig extends Config {
 
     @Key("deviceName")
-    String deviceName();
+    String getDeviceName();
 
     @Key("platformVersion")
-    String platformVersion();
+    String getPlatformVersion();
 
 }

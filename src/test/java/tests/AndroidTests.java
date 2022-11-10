@@ -35,8 +35,8 @@ public class AndroidTests extends TestBase {
     @Test
     @Tag("Mobile")
     @Owner("imbaReaver")
-    @Feature("Page title")
-    @DisplayName("Search")
+    @Feature("Search")
+    @DisplayName("Open article test")
     void openArticleTest() {
 
         step("Skip onboarding", () ->
@@ -44,7 +44,7 @@ public class AndroidTests extends TestBase {
 
         step("Type search", () -> {
             searchBar.clickSearch();
-            searchBar.sendSearch("JUnit");
+            searchBar.sendSearch("Gradle");
         });
 
         step("Verify search content found", () ->

@@ -18,14 +18,14 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
     public WebDriver createDriver(Capabilities capabilities) {
 
         BrowserstackCredentialsConfig config = ConfigFactory.create(BrowserstackCredentialsConfig.class, System.getProperties());
-        String login = config.login();
-        String password = config.password();
-        String app = config.app();
-        String device = config.device();
-        String osVersion = config.osVersion();
-        String project = config.project();
-        String build = config.build();
-        String name = config.name();
+        String login = config.getLogin();
+        String password = config.getPassword();
+        String app = config.getApp();
+        String device = config.getDevice();
+        String osVersion = config.getOsVersion();
+        String project = config.getProject();
+        String build = config.getBuild();
+        String name = config.getName();
 
         MutableCapabilities mutableCapabilities = new MutableCapabilities();
         mutableCapabilities.merge(capabilities);
